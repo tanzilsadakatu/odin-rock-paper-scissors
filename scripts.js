@@ -1,3 +1,8 @@
+function game(playerChoice, computerChoice) {
+  console.log(`You chose ${playerChoice}, I chose ${computerChoice}`);
+  console.log(gameLogic("rock", "paper"));
+}
+
 function gameLogic(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {
     return "draw";

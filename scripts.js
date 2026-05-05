@@ -26,11 +26,6 @@ function gameLogic(playerChoice, computerChoice) {
   return "You win!";
 }
 
-function getPlayerChoice() {
-  const choice = prompt(`Pick 1: rock, paper, scissors`);
-  return choice.toLowerCase();
-}
-
 function getComputerChoice() {
   const options = ["rock", "paper", "scissors"];
   return options[randomInteger(2)];

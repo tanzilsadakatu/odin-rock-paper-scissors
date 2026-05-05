@@ -1,7 +1,9 @@
 function game(playerChoice, computerChoice) {
   console.log(`You chose ${playerChoice}, I chose ${computerChoice}`);
-  console.log(gameLogic("rock", "paper"));
+  console.log(gameLogic(playerChoice, computerChoice));
 }
+
+game(getPlayerChoice(), getComputerChoice());
 
 function gameLogic(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {
@@ -19,12 +21,12 @@ function gameLogic(playerChoice, computerChoice) {
   return "You win!";
 }
 
-function playerChoice() {
+function getPlayerChoice() {
   const choice = prompt(`Pick 1: rock, paper, scissors`);
   return choice.toLowerCase();
 }
 
-function computerChoice() {
+function getComputerChoice() {
   const options = ["rock", "paper", "scissors"];
   return options[randomInteger(2)];
 }

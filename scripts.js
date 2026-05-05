@@ -1,3 +1,17 @@
+const btnRock = document.querySelector("#rock");
+const btnPaper = document.querySelector("#paper");
+const btnScissors = document.querySelector("#scissors");
+
+btnRock.addEventListener("click", () => {
+  game("rock", getComputerChoice());
+});
+btnPaper.addEventListener("click", () => {
+  game("paper", getComputerChoice());
+});
+btnScissors.addEventListener("click", () => {
+  game("scissors", getComputerChoice());
+});
+
 function game(playerChoice, computerChoice) {
   const resultBoard = document.querySelector("#result-board");
   const choicesMade = document.querySelector(".choices-made");
@@ -5,9 +19,6 @@ function game(playerChoice, computerChoice) {
 
   choicesMade.textContent = `You chose ${playerChoice}, I chose ${computerChoice}`;
   result.textContent = gameLogic(playerChoice, computerChoice);
-
-  resultBoard.appendChild(choicesMade);
-  resultBoard.appendChild(result);
 }
 
 function gameLogic(playerChoice, computerChoice) {

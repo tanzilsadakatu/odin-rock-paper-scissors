@@ -1,9 +1,14 @@
 function game(playerChoice, computerChoice) {
-  console.log(`You chose ${playerChoice}, I chose ${computerChoice}`);
-  console.log(gameLogic(playerChoice, computerChoice));
-}
+  const resultBoard = document.querySelector("#result-board");
+  const choicesMade = document.querySelector(".choices-made");
+  const result = document.querySelector(".result");
 
-game(getPlayerChoice(), getComputerChoice());
+  choicesMade.textContent = `You chose ${playerChoice}, I chose ${computerChoice}`;
+  result.textContent = gameLogic(playerChoice, computerChoice);
+
+  resultBoard.appendChild(choicesMade);
+  resultBoard.appendChild(result);
+}
 
 function gameLogic(playerChoice, computerChoice) {
   if (playerChoice === computerChoice) {

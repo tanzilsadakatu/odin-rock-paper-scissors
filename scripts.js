@@ -1,3 +1,19 @@
+function gameLogic(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return "draw";
+  }
+
+  if (
+    (playerChoice === "rock" && computerChoice === "paper") ||
+    (playerChoice === "paper" && computerChoice === "scissors") ||
+    (playerChoice === "scissors" && computerChoice === "rock")
+  ) {
+    return "I win!";
+  }
+
+  return "You win!";
+}
+
 function playerChoice() {
   const choice = prompt(`Pick 1: rock, paper, scissors`);
   return choice.toLowerCase();

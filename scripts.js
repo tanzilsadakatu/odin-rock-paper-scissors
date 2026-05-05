@@ -1,5 +1,5 @@
-function gameLogic(userChoice, computerChoice) {
-  if (userChoice === computerChoice) {
+function gameLogic(playerChoice, computerChoice) {
+  if (playerChoice === computerChoice) {
     return "draw";
   }
 

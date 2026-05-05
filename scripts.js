@@ -18,7 +18,7 @@ function game(playerChoice, computerChoice) {
   const result = document.querySelector(".result");
 
   choicesMade.textContent = `You chose ${playerChoice}, I chose ${computerChoice}`;
-  result.textContent = gameLogic(playerChoice, computerChoice);
+  result.textContent = `Result: ${gameLogic(playerChoice, computerChoice)}`;
 }
 
 function gameLogic(playerChoice, computerChoice) {

@@ -13,7 +13,6 @@ btnScissors.addEventListener("click", () => {
 });
 
 function game(playerChoice, computerChoice) {
-  const resultBoard = document.querySelector("#result-board");
   const choicesMade = document.querySelector(".choices-made");
   const result = document.querySelector(".result");
 
